@@ -30,7 +30,7 @@ Criar um mascote virtual empático e acolhedor, que ajuda pessoas a lidarem com 
 
 ---
 
-## 🔧 Backend (Python/JS + banco de dados)
+## 🔧 Backend (NestJs + banco de dados)
 
 - Recebe o sentimento informado pelo usuário.
 - Busca sugestões no dicionário emocional.
@@ -51,8 +51,8 @@ Criar um mascote virtual empático e acolhedor, que ajuda pessoas a lidarem com 
 
 ## ✨ Futuro do PsicoBot
 Com o tempo, o projeto poderá incorporar:
-- Backend em Django
+- Backend em NestJs
 - Frontend em Angular
-- Banco de dados com SQLite ou PostgreSQL
+- Banco de dados com PostgreSQL
 - Interface web interativa e responsiva
-- Versão mobile ou PWA
+- Versão mobile 
