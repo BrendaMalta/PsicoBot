@@ -1,29 +1,41 @@
 # Planejamento - Projeto PsicoBot
 
 ## Objetivo
-Criar um mascote virtual que ajuda a lidar com emoções através de sugestões práticas de autocuidado. O projeto será desenvolvido com base nos conhecimentos que estou adquirindo em Python, com possibilidade de expansão futura usando Django e Angular.
+Criar um mascote virtual que ajuda a lidar com emoções através de sugestões práticas de autocuidado. O projeto será desenvolvido com o backend usando NestJS e o frontend com Angular, mantendo a escalabilidade e modularidade.
 
-## Fase 1 - CLI básica (Interface de Linha de Comando)
+## Fase 1 - Backend com NestJS e Frontend com Angular
 
 ### Objetivos
-- Receber do usuário uma emoção digitada (ex: tristeza, raiva, ansiedade).
+- Receber do usuário uma emoção selecionada (ex: tristeza, raiva, ansiedade).
 - Retornar uma sugestão de autocuidado de forma empática.
-- Manter o código organizado e modularizado.
-- Iniciar testes básicos com `pytest`.
+- Organizar o código de forma modular com DTOs, controllers, services e interfaces.
+- Implementar e testar as funcionalidades do backend.
+- Começar a planejar a interface e os recursos visuais do frontend.
 
 ### Estrutura inicial
-- `psicobot/`
-  - `main.py`: ponto de entrada
-  - `emotions.py`: lógica para detectar emoções
-  - `suggestions.py`: sugestões de autocuidado
-- `docs/`
-  - `planning.md`: este planejamento
-  - `user_guide.md`: guia futuro para uso
-- `tests/`
-  - `test_emotions.py`: onde testes serão criados
+- **backend/**
+  - `src/`
+    - `emotions/`: módulo para manipular as emoções.
+    - `suggestions/`: módulo para as sugestões de autocuidado.
+    - `main.ts`: ponto de entrada do aplicativo NestJS.
+  - `docs/`
+    - `planning.md`: planejamento atualizado.
+    - `user_guide.md`: guia futuro para uso.
+  - `tests/`
+    - `emotions/`: testes relacionados ao módulo de emoções.
+    - `suggestions/`: testes para o módulo de sugestões.
 
 ### Próximos passos
-1. Esboçar funções principais no `main.py`.
-2. Criar função para identificar emoção em `emotions.py`.
-3. Criar dicionário de sugestões no `suggestions.py`.
-4. Montar a primeira interação completa do bot.
+1. **Backend**:
+   - Finalizar a integração do backend com o banco de dados (ou simulação de dados).
+   - Criar endpoints para capturar as emoções do usuário e sugerir atividades de autocuidado.
+   - Testar as funcionalidades de criação e consulta de sugestões.
+   
+2. **Frontend**:
+   - Definir o design inicial da interface, incluindo a aparência do robô.
+   - Criar o primeiro esboço da interação do usuário, com a seleção de emoções e a apresentação de sugestões de autocuidado.
+
+3. **Considerações futuras**:
+   - Avaliar a implementação de um sistema de login e histórico do usuário, caso necessário.
+   - Explorar a possibilidade de integrar o frontend com o backend de forma fluida.
+   - Estabelecer uma base para escalar a aplicação, conforme novos requisitos forem surgindo.

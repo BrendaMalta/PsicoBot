@@ -17,18 +17,23 @@ export class EmotionsController {
     return this.emotionsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.emotionsService.findOne(+id);
+  @Get('/list')
+  getEmotionsList() {
+    return this.emotionsService.getEmotionsList();
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateEmotionDto: UpdateEmotionDto) {
-    return this.emotionsService.update(+id, updateEmotionDto);
-  }
+  // @Get(':id')
+  // findOne(@Param('id') id: string) {
+  //   return this.emotionsService.findOne(+id);
+  // }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.emotionsService.remove(+id);
-  }
+  // @Patch(':id')
+  // update(@Param('id') id: string, @Body() updateEmotionDto: UpdateEmotionDto) {
+  //   return this.emotionsService.update(+id, updateEmotionDto);
+  // }
+
+  // @Delete(':id')
+  // remove(@Param('id') id: string) {
+  //   return this.emotionsService.remove(+id);
+  // }
 }
