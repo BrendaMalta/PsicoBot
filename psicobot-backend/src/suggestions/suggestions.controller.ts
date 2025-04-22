@@ -17,9 +17,10 @@ export class SuggestionsController {
     return this.suggestionsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.suggestionsService.findOne(+id);
+  
+  @Get('by-emotion/:emotion')
+  findByEmotion(@Param('emotion') emotion: string) {
+    return this.suggestionsService.findByEmotion(emotion);
   }
 
   @Patch(':id')

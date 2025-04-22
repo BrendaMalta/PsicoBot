@@ -5,6 +5,7 @@ import { UpdateSuggestionDto } from './dto/update-suggestion.dto';
 @Injectable()
 export class SuggestionsService {
   private suggestions: CreateSuggestionDto[] = [];
+  emotion: any;
 
   create(createSuggestionDto: CreateSuggestionDto) {
     this.suggestions.push(createSuggestionDto);
@@ -19,6 +20,15 @@ export class SuggestionsService {
   findOne(id: number) {
     return `This action returns a #${id} suggestion`;
   }
+
+  
+  findByEmotion(emotion: string) {
+    return this.suggestions.filter(
+      (suggestion) => suggestion.emotion_related.toLowerCase() === emotion.toLowerCase()
+    );
+  }
+
+
 
   update(id: number, updateSuggestionDto: UpdateSuggestionDto) {
     return `This action updates a #${id} suggestion`;

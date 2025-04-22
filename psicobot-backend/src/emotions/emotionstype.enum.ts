@@ -1,4 +1,4 @@
-export enum Emotion {
+export enum EmotionType {
     HAPPY = 'Feliz',
     SAD = 'Triste',
     ANXIOUS = 'Ansioso',

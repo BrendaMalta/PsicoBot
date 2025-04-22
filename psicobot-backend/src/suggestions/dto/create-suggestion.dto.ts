@@ -1,10 +1,10 @@
-import { IsString, IsOptional, IsNotEmpty} from 'class-validator';
+import { IsString, IsOptional, IsNotEmpty, IsEnum} from 'class-validator';
+import { EmotionType } from 'src/emotions/emotionstype.enum';
 
 export class CreateSuggestionDto {
-    @IsString()
-    @IsNotEmpty()  
-    emotion_related: string;   //nao esquecer de mudar para id quando tiver o banco 
-
+    @IsEnum(EmotionType)   
+    emotion_related: EmotionType;
+    
     @IsString()
     @IsNotEmpty()
     self_care_suggestion: string;
@@ -12,8 +12,5 @@ export class CreateSuggestionDto {
     @IsString()
     @IsOptional()
     suggestion_type: string; //Tipo de sugestão (ex: "atividade", "relaxamento")
-
-    //emocao_relacionada, sugestao_autocuidado e tipo_sugestao.
-
 
 }
